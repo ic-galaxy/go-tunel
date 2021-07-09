@@ -24,7 +24,6 @@ func main() {
 	var addr = flag.String("b", "127.0.0.1", "ip to bind [server only]")
 	flag.Parse()
 
-	// client usage: gotunel [-h=<server hostname>] <local port>
 	if flag.Arg(0) != "" {
 		conn, err := net.Dial("tcp", net.JoinHostPort(*host, *port))
 		fatal(err)
@@ -49,7 +48,6 @@ func main() {
 		return
 	}
 
-	// server usage: gotunel [-h=<hostname>] [-b=<bind ip>]
 	l, err := net.Listen("tcp", net.JoinHostPort(*addr, *port))
 	fatal(err)
 	defer l.Close()
