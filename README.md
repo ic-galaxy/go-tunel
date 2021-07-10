@@ -1,4 +1,4 @@
-# gotunel
+# go-tunel
 
 Expose localhost HTTP servers with a public URL
 
